@@ -14,8 +14,7 @@ const shopController = require('./controllers/shop');
 const isAuth = require('./middleware/is-auth');
 const User = require('./models/user');
 
-const MONGODB_URI =
-  'mongodb+srv://joe:Tas234hk@cluster0.wvm16.mongodb.net/shop';
+const MONGODB_URI = process.env.MONGODB;
 
 const app = express();
 const store = new MongoDBStore({
